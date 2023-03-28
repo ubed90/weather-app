@@ -1,0 +1,40 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="shortcut icon" href="./img/favicon.png" type="image/x-icon">
+    <link rel="stylesheet" type="text/css" href="./css/styles.css" />
+    <title>Express - {{>title}}</title>
+  </head>
+  <body>
+    <div class="main">
+      {{>header}}
+
+      <div class="index main-content container">
+        <h3 class="title">Search for Place to get weather!</h3>
+
+        <div class="weather-result">
+          <img class="result-img" src="">
+          <h4 class="result-location"></h4>
+          <p class="result-data"></p>
+        </div>
+
+        <form class="form">
+          <input type="text" placeholder="e.g Mumbai, New York, Delhi" class="form-search">
+          <button type="submit" class="form-btn">Search</button>
+        </form>
+      </div>
+
+    </div>
+
+    {{>footer}}
+
+    {{!-- <script type="module" src="./js/store/actions.mjs" ></script>
+    <script type="module" src="./js/store/reducers.mjs" ></script>
+    <script type="module" src="./js/store/store.mjs" ></script> --}}
+    <script type="module" src="./js/store/index.mjs" ></script>
+    <script type="module" src="./js/app.js">
+    </script>
+  </body>
+</html>
