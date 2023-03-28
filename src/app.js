@@ -8,6 +8,8 @@ const forecast = require('./utils/forecast');
 // Configure partials
 const hbs = require("hbs");
 
+const port = process.env.PORT || 3000;
+
 const app = express();
 const viewsPath = path.join(__dirname, '../templates/views');
 const partialsPath = path.join(__dirname, '../templates/partials');
@@ -120,6 +122,6 @@ app.get('*', (req, res) => {
 //   res.send("Hello Express!!");
 // });
 
-app.listen(3000, () => {
-  console.log("Server is up on port 3000");
+app.listen(port, () => {
+  console.log("Server is up on port ",port);
 });

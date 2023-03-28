@@ -25,7 +25,7 @@ weatherForm.addEventListener("submit", (event) => {
 
   store.dispatch(new fromStore.GetWeatherData({ searchTerm , icon: loadingImageLink, location: 'Getting Weather info...', forecast: 'Please wait...'  }))
 
-  fetch("http://localhost:3000/weather?address="+searchTerm)
+  fetch("/weather?address="+searchTerm)
     .then((response) => {
       response.json().then((data) => {
         parseResult(data, searchTerm);
