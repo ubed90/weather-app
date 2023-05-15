@@ -4,12 +4,12 @@ const WEATHERSTACK_API_KEY = 'f5e234947d483301d3d0699a005a0ab0';
 
 const forecastWeather = (latitude, longitude, place_name, callback) => {
 
-    const weatherApiUrl = `http://api.weatherstack.com/current?access_key=${WEATHERSTACK_API_KEY}&query=${latitude},${longitude}&units=f`;
+    const weatherApiUrl = `http://api.weatherstack.com/current?access_key=${WEATHERSTACK_API_KEY}&query=${latitude},${longitude}`;
 
     request({ url: weatherApiUrl , json: true } , (error , { body }) => {
         // const data = body;
         // console.log(data.current);
-        console.log(body.current);
+        // console.log(body.current);
 
         if (error) {
             callback("Unable to connect to weather services!!", undefined, undefined);
